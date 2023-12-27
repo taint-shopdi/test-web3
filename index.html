@@ -36,5 +36,8 @@
     defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
 
     message.postMessage("hi")
+    function fromFlutter(defaultAccount) {
+    document.getElementById("defaultAccount").innerHTML = defaultAccount;
+}
 </script>
 </html>
