@@ -8,6 +8,8 @@
 <h1>Web3: <span id="web3">origin</span></h1>
 <h1>windowWeb3DefaultAccount: <span id="windowWeb3DefaultAccount">origin</span></h1>
 <h1>windowDefaultAccount: <span id="windowDefaultAccount">origin</span></h1>
+<h1>defaultAccount: <span id="defaultAccount">origin</span></h1>
+
 
 
 
@@ -17,7 +19,7 @@
     var defaultAccount = web3.defaultAccount 
     var windowWeb3DefaultAccount = window.web3.defaultAccount
     var windowDefaultAccount = window.defaultAccount
-
+    var defaultAccount = defaultAccount
     console.log("windowWeb3", windowWeb3)
     console.log("defaultAccount", defaultAccount)
     console.log("windowWeb3DefaultAccount", windowWeb3DefaultAccount)
@@ -27,6 +29,8 @@
     defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
     windowWeb3DefaultAccount && (document.getElementById("windowWeb3DefaultAccount").innerText = windowWeb3DefaultAccount)
     windowDefaultAccount && (document.getElementById("windowDefaultAccount").innerText = windowDefaultAccount)
+    defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
+
 
 </script>
 </html>
