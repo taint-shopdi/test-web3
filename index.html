@@ -3,7 +3,30 @@
 <body>
 
 <h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<p id="">My first paragraph.</p>
+<h1>Window web3: <span id="windowWeb3">origin</span></h1>
+<h1>Web3: <span id="web3">origin</span></h1>
+<h1>windowWeb3DefaultAccount: <span id="windowWeb3DefaultAccount">origin</span></h1>
+<h1>windowDefaultAccount: <span id="windowDefaultAccount">origin</span></h1>
+
+
 
 </body>
+<script>
+    var windowWeb3 = window.web3
+    var defaultAccount = web3.defaultAccount 
+    var windowWeb3DefaultAccount = window.web3.defaultAccount
+    var windowDefaultAccount = window.defaultAccount
+
+    console.log("windowWeb3", windowWeb3)
+    console.log("defaultAccount", defaultAccount)
+    console.log("windowWeb3DefaultAccount", windowWeb3DefaultAccount)
+    console.log("windowDefaultAccount", windowDefaultAccount)
+
+    windowWeb3 && (document.getElementById("windowWeb3").innerText = windowWeb3)
+    defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
+    windowWeb3DefaultAccount && (document.getElementById("windowWeb3DefaultAccount").innerText = windowWeb3DefaultAccount)
+    windowDefaultAccount && (document.getElementById("windowDefaultAccount").innerText = windowDefaultAccount)
+
+</script>
 </html>
