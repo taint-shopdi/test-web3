@@ -25,54 +25,24 @@
 
 
 </body>
-<!-- <script type="text/javascript">
-    // console.log(window.web3)
-    // // var windowWeb3 = JSON.stringify(window.web3)
-    // var web3defaultAccount = web3.defaultAccount 
-    // var windowWeb3DefaultAccount = window.web3.defaultAccount
-    // var windowDefaultAccount = window.defaultAccount
-    // var defaultAccount = defaultAccount
-    // console.log("windowWeb3", windowWeb3)
-    // console.log("defaultAccount", defaultAccount)
-    // console.log("windowWeb3DefaultAccount", windowWeb3DefaultAccount)
-    // console.log("windowDefaultAccount", windowDefaultAccount)
+<script type="text/javascript">
+
+    var WE3td = web3.isTDWallet
+    var WE3metamask = web3.isMetaMask
+    var Ethereumtd = ethereum.isTDWallet
+    var Ethereummetamask = ethereum.isMetaMask
+    var WE3metamaskProv = web3.currentProvider.isMetaMask
+
+    console.log("web3", WE3td)
+    console.log("WE3metamask", WE3metamask)
+    console.log("Ethereumtd", Ethereumtd)
+    console.log("Ethereummetamask", Ethereummetamask)
+    console.log("WE3metamaskProv", WE3metamaskProv)
 
 
-    // var WE3td = web3.isTDWallet
-    // var WE3metamask = web3.isMetaMask
-    // var Ethereumtd = ethereum.isTDWallet
-    // var WE3metamaskProv = web3.currentProvider.isMetaMask
+</script>
 
-    // windowWeb3 && (document.getElementById("windowWeb3").innerText = windowWeb3)
-    // web3defaultAccount && (document.getElementById("web3defaultAccount").innerText = web3defaultAccount)
-    // windowWeb3DefaultAccount && (document.getElementById("windowWeb3DefaultAccount").innerText = windowWeb3DefaultAccount)
-    // windowDefaultAccount && (document.getElementById("windowDefaultAccount").innerText = windowDefaultAccount)
-    // document.getElementById("defaultAccount").innerText = defaultAccount
-
-    
-    // let count = 1
-    // setInterval(() => {
-    //     var WE3td = web3.isTDWallet
-    //     var WE3metamask = web3.isMetaMask
-    //     var Ethereumtd = ethereum.isTDWallet
-    //     var Ethereummetamask = ethereum.isMetaMask
-    //     var WE3metamaskProv = web3.currentProvider.isMetaMask
-    //     document.getElementById("WE3td").innerText = WE3td
-    //     document.getElementById("WE3metamask").innerText = WE3metamask
-    //     document.getElementById("Ethereumtd").innerText = Ethereumtd
-    //     document.getElementById("Ethereummetamask").innerText = Ethereummetamask
-    //     document.getElementById("WE3metamaskProv").innerText = WE3metamaskProv
-    //     document.getElementById("count").innerText = count++
-
-    // }, 1000)
-    // message.postMessage("hi")
-    // function fromFlutter(defaultAccount) {
-    // document.getElementById("defaultAccount").innerHTML = defaultAccount;
-    // ethereum["isMetamask"]
-    // }
-</script> -->
-
-<script>
+<!-- <script>
     var _ethereum = ethereum || window.ethereum
     var _web3 = web3 || window.web3
     console.log("ethereum metamask", _ethereum?.isMetaMask)
@@ -89,5 +59,5 @@
     //     console.log("web3", _web3)
     //     console.log("web")
     // }, false);
-</script>
+</script> -->
 </html>
