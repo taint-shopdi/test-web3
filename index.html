@@ -41,10 +41,10 @@
     console.log("windowDefaultAccount", windowDefaultAccount)
 
 
-    var WE3td = web3.isTDWallet
-    var WE3metamask = web3.isMetaMask
-    var Ethereumtd = web3.isTDWallet
-    var Ethereummetamask = web3.isMetaMask
+    var WE3td = window.web3.isTDWallet
+    var WE3metamask = window.web3.isMetaMask
+    var Ethereumtd = window.ethereum.isTDWallet
+    var Ethereummetamask = window.ethereum.isMetaMask
 
     windowWeb3 && (document.getElementById("windowWeb3").innerText = windowWeb3)
     web3defaultAccount && (document.getElementById("web3defaultAccount").innerText = web3defaultAccount)
@@ -52,10 +52,10 @@
     windowDefaultAccount && (document.getElementById("windowDefaultAccount").innerText = windowDefaultAccount)
     defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
 
-    WE3td && (document.getElementById("WE3td").innerText = WE3td)
-    WE3metamask && (document.getElementById("WE3metamask").innerText = WE3metamask)
-    Ethereumtd && (document.getElementById("Ethereumtd").innerText = Ethereumtd)
-    Ethereummetamask && (document.getElementById("Ethereummetamask").innerText = Ethereummetamask)
+    document.getElementById("WE3td").innerText = WE3td
+    document.getElementById("WE3metamask").innerText = WE3metamask
+   document.getElementById("Ethereumtd").innerText = Ethereumtd
+    document.getElementById("Ethereummetamask").innerText = Ethereummetamask
 
 
     message.postMessage("hi")
