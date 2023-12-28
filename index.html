@@ -19,6 +19,8 @@
 
 <h1>done</h1>
 
+<h1 id="count">1</h1>
+
 
 
 
@@ -47,12 +49,19 @@
     windowDefaultAccount && (document.getElementById("windowDefaultAccount").innerText = windowDefaultAccount)
     defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
 
-    document.getElementById("WE3td").innerText = WE3td
+    
+    let count = 1
+    setInterval(() => {var WE3td = web3.isTDWallet
+    var WE3metamask = web3.isMetaMask
+    var Ethereumtd = ethereum.isTDWallet
+    var Ethereummetamask = ethereum.isMetaMask
+        document.getElementById("WE3td").innerText = WE3td
     document.getElementById("WE3metamask").innerText = WE3metamask
    document.getElementById("Ethereumtd").innerText = Ethereumtd
     document.getElementById("Ethereummetamask").innerText = Ethereummetamask
+    document.getElementById("count").innerText = count++
 
-
+    }, 1000)
     message.postMessage("hi")
     function fromFlutter(defaultAccount) {
     document.getElementById("defaultAccount").innerHTML = defaultAccount;
