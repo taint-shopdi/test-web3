@@ -14,6 +14,8 @@
 <h1>WE3 metamask: <span id="WE3metamask">origin</span></h1>
 <h1>Ethereum td: <span id="Ethereumtd">origin</span></h1>
 <h1>Ethereum metamask: <span id="Ethereummetamask">origin</span></h1>
+<h1>WE3 metamask Prov: <span id="WE3metamaskProv">origin</span></h1>
+
 
 <h1>defaultAccount: <span id="defaultAccount">origin</span></h1>
 
@@ -41,24 +43,28 @@
     var WE3td = web3.isTDWallet
     var WE3metamask = web3.isMetaMask
     var Ethereumtd = ethereum.isTDWallet
-    var Ethereummetamask = ethereum.isMetaMask
+    var WE3metamaskProv = web3.currentProvider.isMetaMask
 
     windowWeb3 && (document.getElementById("windowWeb3").innerText = windowWeb3)
     web3defaultAccount && (document.getElementById("web3defaultAccount").innerText = web3defaultAccount)
     windowWeb3DefaultAccount && (document.getElementById("windowWeb3DefaultAccount").innerText = windowWeb3DefaultAccount)
     windowDefaultAccount && (document.getElementById("windowDefaultAccount").innerText = windowDefaultAccount)
-    defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
+    document.getElementById("defaultAccount").innerText = defaultAccount
 
     
     let count = 1
-    setInterval(() => {var WE3td = web3.isTDWallet
+    setInterval(() => {
+    var WE3td = web3.isTDWallet
     var WE3metamask = web3.isMetaMask
     var Ethereumtd = ethereum.isTDWallet
     var Ethereummetamask = ethereum.isMetaMask
+    var EthereummetamaskProv = 
         document.getElementById("WE3td").innerText = WE3td
     document.getElementById("WE3metamask").innerText = WE3metamask
    document.getElementById("Ethereumtd").innerText = Ethereumtd
     document.getElementById("Ethereummetamask").innerText = Ethereummetamask
+    document.getElementById("WE3metamaskProv").innerText = WE3metamaskProv
+
     document.getElementById("count").innerText = count++
 
     }, 1000)
