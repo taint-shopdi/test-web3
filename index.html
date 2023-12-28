@@ -10,6 +10,10 @@
 <h1>web3defaultAccount: <span id="web3defaultAccount">origin</span></h1>
 <h1>windowDefaultAccount: <span id="windowDefaultAccount">origin</span></h1>
 
+<h1>WE3 td: <span id="WE3td">origin</span></h1>
+<h1>WE3 metamask: <span id="WE3metamask">origin</span></h1>
+<h1>Ethereum td: <span id="Ethereumtd">origin</span></h1>
+<h1>Ethereum metamask: <span id="Ethereummetamask">origin</span></h1>
 
 <h1>defaultAccount: <span id="defaultAccount">origin</span></h1>
 
@@ -19,7 +23,8 @@
 
 </body>
 <script type="text/javascript">
-    var windowWeb3 = window.web3
+    console.log(window.web3)
+    // var windowWeb3 = JSON.stringify(window.web3)
     var web3defaultAccount = web3.defaultAccount 
     var windowWeb3DefaultAccount = window.web3.defaultAccount
     var windowDefaultAccount = window.defaultAccount
@@ -29,15 +34,28 @@
     console.log("windowWeb3DefaultAccount", windowWeb3DefaultAccount)
     console.log("windowDefaultAccount", windowDefaultAccount)
 
+
+    var WE3td = web3.isTDWallet
+    var WE3metamask = web3.isMetaMask
+    var Ethereumtd = web3.isTDWallet
+    var Ethereummetamask = web3.isMetaMask
+
     windowWeb3 && (document.getElementById("windowWeb3").innerText = windowWeb3)
     web3defaultAccount && (document.getElementById("web3defaultAccount").innerText = web3defaultAccount)
     windowWeb3DefaultAccount && (document.getElementById("windowWeb3DefaultAccount").innerText = windowWeb3DefaultAccount)
     windowDefaultAccount && (document.getElementById("windowDefaultAccount").innerText = windowDefaultAccount)
     defaultAccount && (document.getElementById("defaultAccount").innerText = defaultAccount)
 
+    WE3td && (document.getElementById("WE3td").innerText = WE3td)
+    WE3metamask && (document.getElementById("WE3metamask").innerText = WE3metamask)
+    Ethereumtd && (document.getElementById("Ethereumtd").innerText = Ethereumtd)
+    Ethereummetamask && (document.getElementById("Ethereummetamask").innerText = Ethereummetamask)
+
+
     message.postMessage("hi")
     function fromFlutter(defaultAccount) {
     document.getElementById("defaultAccount").innerHTML = defaultAccount;
+
 }
 </script>
 </html>
