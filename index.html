@@ -73,8 +73,11 @@
 </script>
 
 <script>
-    var ethereum = ethereum || window.ethereum
-    console.log("ethereum", ethereum)
+    var _ethereum = ethereum || window.ethereum
+    var _web3 = web3 || window.web3
+    console.log("ethereum metamask", ethereum?.isMetaMask)
+    console.log("ethereum", _ethereum)
+    console.log("web3", _web3)
     console.log("web")
 </script>
 </html>
